@@ -34,11 +34,13 @@ body {
     color:white;
     text-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
-    z-index: 999;
+    z-index: -1;
     -webkit-animation: fadein 1s;
-    border-radius: 25px;
+    border-radius: 50px;
     background: rgba(0, 0, 0, 0.5);
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    left: 39%;
+    top: 18%;
 }
 
 ::-webkit-scrollbar {
@@ -51,10 +53,15 @@ h1{
     font-size: 50px;
 }
 
+img{
+    width: 50%;
+}
+
 
 .text{
     margin-top: 50px;
     margin-bottom: 50px;
+    z-index: 1;
 }
 
 #gotchaResult{
@@ -78,16 +85,16 @@ h1{
     word-spacing:10px;
     color: #ffffff;
     transition: all .5s ease;
-    background: #007bff;
+    background: #202020;
 }
 
 video {
 	position: fixed;
-	top: 0; 
-	left: 0;
+    left: -12%;
+    top: -24%;
 	width: auto;
 	height: auto;
     z-index: -999;
-    filter: blur(50px);
-    -webkit-filter: blur(10px);
+    filter: blur(25px);
+    -webkit-filter: blur(25px);
 }
