@@ -19,7 +19,7 @@ function process() {
     for(count=0; count<10; count++) {
         var random = Math.random();
 
-        if (random <= 0.051) {
+        if (random <= 0.006) {
             var fifthRandom = Math.random();
             if (fifthRandom >= 0.5) {
                 result.push("★★★"+randomItem(fifthUpList)+"★★★");
