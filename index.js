@@ -2,6 +2,7 @@ var oneCount = 0;
 var oneResult = [];
 var tenCount = 0;
 var tenResult = [];
+var totalCount = 0;
 
 var thirdList = ["탄궁", "신궁의 서약", "까마귀깃 활", "비취 오브", "드래곤 슬레이어 영웅담", "마도 서론", "흑술창", "훌륭한 대화수단", "드래곤 블러드 소드", "강철의 그림자", "비천어검", "여명신검", "차가운 칼날"];
 var fourthUpList = ["신염", "증운", "레이저"];
@@ -17,65 +18,75 @@ function randomItem(a) {
 // 4성확률 5.1%. 신염 증운 레이저 확률 50%. 10회기원시 반드시 획득. 얻은적 없다면 그다음 무조건.
 
 function oneGotcha() {
-    result = [];
+    oneResult = [];
     for(oneCount=0; oneCount<1; oneCount++) {
         var oneRandom = Math.random();
 
         if (oneRandom <= 0.006) {
             var fifthRandom = Math.random();
             if (fifthRandom >= 0.5) {
-                result.push("★★★"+randomItem(fifthUpList)+"★★★");
+                document.getElementById("gotchaResult").style.color = "#ffdeae";
+                oneResult.push(randomItem(fifthUpList));
             }
             else {
-                result.push("☆☆☆"+randomItem(fifthList)+"☆☆☆");
+                document.getElementById("gotchaResult").style.color = "#fffaae";
+                oneResult.push(randomItem(fifthList));
             }
         }
 
-        else if (oneRandom >= 0.006 && oneRandom <= 0.051) {
+        else if (oneRandom > 0.006 && oneRandom <= 0.051) {
             var fourthRandom = Math.random();
             if (fourthRandom >= 0.5) {
-                result.push(randomItem(fourthUpList));
+                document.getElementById("gotchaResult").style.color = "#d0aeff";
+                oneResult.push(randomItem(fourthUpList));
             }
             else{
-                result.push(randomItem(fourthList));
+                document.getElementById("gotchaResult").style.color = "#edaeff";
+                oneResult.push(randomItem(fourthList));
             }
         }
 
-        else{
-            result.push(randomItem(thirdList));
+        else if (oneRandom > 0.051) {
+            document.getElementById("gotchaResult").style.color = "#aed4ff";
+            oneResult.push(randomItem(thirdList));
         }
     }
-    document.getElementById("result").innerText = result;
+    totalCount += 1;
+    document.getElementById("gotchaResult").innerText = oneResult;
+    document.getElementById("gotchaCount").innerText = totalCount+"회 도전";
 }
 
-function tenGotcha() {
-    result = [];
+
+```function tenGotcha() {
+    tenResult = [];
     for(tenCount=0; tenCount<10; tenCount++) {
         var tenRandom = Math.random();
 
         if (tenRandom <= 0.006) {
             var fifthRandom = Math.random();
             if (fifthRandom >= 0.5) {
-                result.push("★★★"+randomItem(fifthUpList)+"★★★");
+                tenResult.push(randomItem(fifthUpList));
             }
             else {
-                result.push("☆☆☆"+randomItem(fifthList)+"☆☆☆");
+                tenResult.push(randomItem(fifthList));
             }
         }
 
         else if (tenRandom >= 0.006 && tenRandom <= 0.051) {
             var fourthRandom = Math.random();
             if (fourthRandom >= 0.5) {
-                result.push(randomItem(fourthUpList));
+                tenResult.push(randomItem(fourthUpList));
             }
             else{
-                result.push(randomItem(fourthList));
+                tenResult.push(randomItem(fourthList));
             }
         }
 
         else{
-            result.push(randomItem(thirdList));
+            tenResult.push(randomItem(thirdList));
         }
     }
-    document.getElementById("result").innerText = result;
-}
+    totalCount += 10;
+    document.getElementById("gotchaResult").innerText = tenResult;
+    document.getElementById("gotchaCount").innerText = totalCount;
+}```
