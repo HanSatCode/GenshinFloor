@@ -1,5 +1,7 @@
-var count = 0;
-var result = [];
+var oneCount = 0;
+var oneResult = [];
+var tenCount = 0;
+var tenResult = [];
 
 var thirdList = ["탄궁", "신궁의 서약", "까마귀깃 활", "비취 오브", "드래곤 슬레이어 영웅담", "마도 서론", "흑술창", "훌륭한 대화수단", "드래곤 블러드 소드", "강철의 그림자", "비천어검", "여명신검", "차가운 칼날"];
 var fourthUpList = ["신염", "증운", "레이저"];
@@ -14,12 +16,12 @@ function randomItem(a) {
 // 5성확률 0.6%. 종려확률 50%. 90회 기원시 반드시 획득. 얻은적 없다면 그다음 무조건.
 // 4성확률 5.1%. 신염 증운 레이저 확률 50%. 10회기원시 반드시 획득. 얻은적 없다면 그다음 무조건.
 
-function process() {
+function oneGotcha() {
     result = [];
-    for(count=0; count<10; count++) {
-        var random = Math.random();
+    for(oneCount=0; oneCount<1; oneCount++) {
+        var oneRandom = Math.random();
 
-        if (random <= 0.006) {
+        if (oneRandom <= 0.006) {
             var fifthRandom = Math.random();
             if (fifthRandom >= 0.5) {
                 result.push("★★★"+randomItem(fifthUpList)+"★★★");
@@ -29,7 +31,7 @@ function process() {
             }
         }
 
-        else if (random >= 0.006 && random <= 0.051) {
+        else if (oneRandom >= 0.006 && oneRandom <= 0.051) {
             var fourthRandom = Math.random();
             if (fourthRandom >= 0.5) {
                 result.push(randomItem(fourthUpList));
@@ -43,6 +45,37 @@ function process() {
             result.push(randomItem(thirdList));
         }
     }
+    document.getElementById("result").innerText = result;
+}
 
+function tenGotcha() {
+    result = [];
+    for(tenCount=0; tenCount<10; tenCount++) {
+        var tenRandom = Math.random();
+
+        if (tenRandom <= 0.006) {
+            var fifthRandom = Math.random();
+            if (fifthRandom >= 0.5) {
+                result.push("★★★"+randomItem(fifthUpList)+"★★★");
+            }
+            else {
+                result.push("☆☆☆"+randomItem(fifthList)+"☆☆☆");
+            }
+        }
+
+        else if (tenRandom >= 0.006 && tenRandom <= 0.051) {
+            var fourthRandom = Math.random();
+            if (fourthRandom >= 0.5) {
+                result.push(randomItem(fourthUpList));
+            }
+            else{
+                result.push(randomItem(fourthList));
+            }
+        }
+
+        else{
+            result.push(randomItem(thirdList));
+        }
+    }
     document.getElementById("result").innerText = result;
 }
