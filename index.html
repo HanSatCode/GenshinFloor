@@ -2,30 +2,23 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>원신 기원 시뮬레이터</title>
+    <title>나만클레없어 - 원신 기원 시뮬레이터</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <script src="index.js"></script>
 </head>
-
-<body>
-    <div class="form">
+<body scroll="no">
+    <section class="form">
         <h6>나만 클레 없어</h6>
         <h1>원신기원</h1>
-        <div class="text">
-
-            <div id="gotchaCount">
-                0회 도전
-            </div>
-
-            <div id="gotchaResult">
-                몇 번 만에 5성 ?
-            </div>
+        <div class="formText">
+            <div id="gotchaCount">0회 도전</div>
+            <div id="gotchaResult">클래 복각 좀 해줘요</div>
         </div>
-            <button type="button" name="oneGotcha" id="oneGotcha" onclick="oneGotcha()">기원 한 번 도전</button><br>
-            <!----<button type="button" name="tenGotcha" id="tenGotcha" onclick="tenGotcha()">1 0 회 기 원</button>--->
-    </div>
-    
+        <button type="button" name="oneGotcha" id="oneGotcha" onclick="oneGotcha()">기원 한 번 도전</button><br>
+        <!----<button type="button" name="tenGotcha" id="tenGotcha" onclick="tenGotcha()">1 0 회 기 원</button>--->
+    </section>
     <video id="video" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
-            <source src="img/klee.mp4">
-    </video>
+    <source src="img/klee.mp4"></video>
 </body>
+</html>
