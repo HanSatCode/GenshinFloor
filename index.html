@@ -8,9 +8,25 @@
     <script src="index.js"></script>
 </head>
 <body>
-    <div id="result">
-        결과없음.
+    <div class="form">
+        <h6>나만 클레 없어</h6>
+        <h1>원신기원</h1>
+        <div class="text">
+
+            <div id="gotchaCount">
+                0회 도전
+            </div>
+
+            <div id="gotchaResult">
+                눌러보세요
+            </div>
+        </div>
+            <button type="button" name="oneGotcha" id="oneGotcha" onclick="oneGotcha()">기원 한 번 도전</button><br>
+            <!----<button type="button" name="tenGotcha" id="tenGotcha" onclick="tenGotcha()">1 0 회 기 원</button>--->
     </div>
-    <button onclick="oneGotcha()">1회 기원</button>
-    <button onclick="tenGotcha()">10회 기원</button>
+    
+    <video id="video" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
+            <source src="img/klee.mp4">
+        
+    </video>
 </body>
