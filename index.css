@@ -13,25 +13,29 @@
 * {margin : 0; padding: 0; box-sizing: border-box;}
 
 body {
+    justify-content: center;
+    align-items: center;
+    display: fixed;
     background: black center center fixed no-repeat;
     overflow: hidden;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
+
 .form{
+    padding-top: 90px; padding-bottom: 90px;
+    padding-left: 70px; padding-right: 70px;
     position: absolute;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    justify-items: center;
     font-family: 'Jua', sans-serif;
     color:white;
     text-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
     z-index: 999;
     -webkit-animation: fadein 1s;
-
-    padding-top: 90px; padding-bottom: 90px;
-    padding-left: 70px; padding-right: 70px;
-    border: 10px solid #ffffff;
     border-radius: 25px;
     background: rgba(0, 0, 0, 0.5);
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
