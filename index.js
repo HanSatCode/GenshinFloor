@@ -25,11 +25,11 @@ function oneGotcha() {
         if (oneRandom <= 0.006) {
             var fifthRandom = Math.random();
             if (fifthRandom >= 0.5) {
-                document.getElementById("gotchaResult").style.color = "#ffdeae";
+                document.getElementById("gotchaResult").style.color = "#ffc375";
                 oneResult.push(randomItem(fifthUpList));
             }
             else {
-                document.getElementById("gotchaResult").style.color = "#fffaae";
+                document.getElementById("gotchaResult").style.color = "#ffe075";
                 oneResult.push(randomItem(fifthList));
             }
         }
@@ -37,17 +37,17 @@ function oneGotcha() {
         else if (oneRandom > 0.006 && oneRandom <= 0.051) {
             var fourthRandom = Math.random();
             if (fourthRandom >= 0.5) {
-                document.getElementById("gotchaResult").style.color = "#d0aeff";
+                document.getElementById("gotchaResult").style.color = "#c050ff";
                 oneResult.push(randomItem(fourthUpList));
             }
             else{
-                document.getElementById("gotchaResult").style.color = "#edaeff";
+                document.getElementById("gotchaResult").style.color = "#f775ff";
                 oneResult.push(randomItem(fourthList));
             }
         }
 
         else if (oneRandom > 0.051) {
-            document.getElementById("gotchaResult").style.color = "#aed4ff";
+            document.getElementById("gotchaResult").style.color = "#75c3ff";
             oneResult.push(randomItem(thirdList));
         }
     }
