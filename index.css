@@ -20,7 +20,7 @@ body {
     color: white;
     background-repeat: no-repeat;
     background-position: center;
-    background-color: rgb(0, 0, 0);
+    background-color: black;
     background-size: cover;
     overflow: hidden;
     -webkit-animation: fadein 1s;
@@ -34,6 +34,14 @@ body {
     border-radius: 40px;
     background: rgba(0, 0, 0, 0.5);
     box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);
+}
+
+.caption {
+    z-index: 999;
+    position: fixed;
+    top: 79%;
+    letter-spacing:1px;
+    font-size: 5px;
 }
 
 h1{
@@ -59,6 +67,13 @@ h6{
     font-weight : lighter;
 }
 
+#gotchaPay {
+    z-index: 999;
+    margin-top: 50px;
+    font-size: 10px;
+    font-weight : lighter;
+}
+
 #oneGotcha {
     word-spacing:2px;
     transition: all .5s ease;
@@ -71,11 +86,28 @@ h6{
     border-radius: 25px;
 }
 
-#oneGotcha:hover {
-    word-spacing:10px;
-    color: #ffffff;
-    background: #202020;
+#keqingGotcha {
+    margin-top: 5px;
+    word-spacing:2px;
     transition: all .5s ease;
+    font-family: 'Jua', sans-serif;
+    width: 48%; height: 25px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.0);
+    font-size: 13px;
+    border: none;
+}
+
+#searchGotcha {
+    margin-top: 5px;
+    word-spacing:2px;
+    transition: all .5s ease;
+    font-family: 'Jua', sans-serif;
+    width: 48%; height: 25px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.0);
+    font-size: 13px;
+    border: none;
 }
 
 video {
