@@ -113,8 +113,6 @@ h6{
 video {
     z-index: -999;
 	position: fixed;
-    left: -12%;
-    top: -24%;
 	width: auto;
 	height: auto;
     filter: blur(25px);
