@@ -108,6 +108,30 @@ function keqingGotcha(){
     }  
 }
 
+function monaGotcha(){
+    oneGotcha();
+    for(searchCount; searchCount++;) {
+        if(document.getElementById("gotchaResult").innerText == "모나"){
+            break;
+        }
+        else {
+            oneGotcha();
+        }
+    }  
+}
+
+function qiqiGotcha(){
+    oneGotcha();
+    for(searchCount; searchCount++;) {
+        if(document.getElementById("gotchaResult").innerText == "치치"){
+            break;
+        }
+        else {
+            oneGotcha();
+        }
+    }  
+}
+
 function searchGotcha(){
     alert("조금만 기다려 자연어는 맞는데 구현이 힘들다");
 }
