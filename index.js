@@ -3,6 +3,9 @@ var oneResult = [];
 var tenCount = 0;
 var tenResult = [];
 var totalCount = 0;
+var totalPay = 0;
+
+var searchCount = 0;
 
 var thirdList = ["탄궁", "신궁의 서약", "까마귀깃 활", "비취 오브", "드래곤 슬레이어 영웅담", "마도 서론", "흑술창", "훌륭한 대화수단", "드래곤 블러드 소드", "강철의 그림자", "비천어검", "여명신검", "차가운 칼날"];
 var fourthUpList = ["신염", "증운", "레이저"];
@@ -52,8 +55,10 @@ function oneGotcha() {
         }
     }
     totalCount += 1;
+    totalPay += 160;
     document.getElementById("gotchaResult").innerText = oneResult;
     document.getElementById("gotchaCount").innerText = totalCount+"회 도전";
+    document.getElementById("gotchaPay").innerText = totalPay+"개의 원석 사용";
 }
 
 
@@ -90,3 +95,19 @@ function oneGotcha() {
     document.getElementById("gotchaResult").innerText = tenResult;
     document.getElementById("gotchaCount").innerText = totalCount;
 }```
+
+function keqingGotcha(){
+    oneGotcha();
+    for(searchCount; searchCount++;) {
+        if(document.getElementById("gotchaResult").innerText == "각청"){
+            break;
+        }
+        else {
+            oneGotcha();
+        }
+    }  
+}
+
+function searchGotcha(){
+    alert("조금만 기다려 자연어는 맞는데 구현이 힘들다");
+}
