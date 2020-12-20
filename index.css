@@ -36,11 +36,10 @@ body {
     box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);
 }
 
-.caption {
+#info {
     z-index: 999;
-    position: fixed;
-    top: 79%;
-    letter-spacing:1px;
+    top: 35px;
+    position: relative;
     font-size: 5px;
 }
 
@@ -91,7 +90,31 @@ h6{
     word-spacing:2px;
     transition: all .5s ease;
     font-family: 'Jua', sans-serif;
-    width: 48%; height: 25px;
+    width: 30%; height: 25px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.0);
+    font-size: 13px;
+    border: none;
+}
+
+#monaGotcha {
+    margin-top: 5px;
+    word-spacing:2px;
+    transition: all .5s ease;
+    font-family: 'Jua', sans-serif;
+    width: 30%; height: 25px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.0);
+    font-size: 13px;
+    border: none;
+}
+
+#qiqiGotcha {
+    margin-top: 5px;
+    word-spacing:2px;
+    transition: all .5s ease;
+    font-family: 'Jua', sans-serif;
+    width: 30%; height: 25px;
     color: white;
     background-color: rgba(0, 0, 0, 0.0);
     font-size: 13px;
