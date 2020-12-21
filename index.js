@@ -34,7 +34,7 @@ function oneGotcha() {
         else {
             document.getElementById("gotchaResult").style.color = "#ffe075";
             oneResult.push(randomItem(fifthList));
-            onlyFifthCount = 1;
+            onlyFifthUpCount = 1;
         }
         onlyFifthCount = 0;
     }
