@@ -1,3 +1,5 @@
+var onlyFifthCount = 0;
+var onlyFifthUpCount = 0;
 var oneCount = 0;
 var oneResult = [];
 var tenCount = 0;
@@ -22,36 +24,68 @@ function randomItem(a) {
 
 function oneGotcha() {
     oneResult = [];
-    for(oneCount=0; oneCount<1; oneCount++) {
-        var oneRandom = Math.random();
 
-        if (oneRandom <= 0.006) {
-            var fifthRandom = Math.random();
-            if (fifthRandom >= 0.5) {
-                document.getElementById("gotchaResult").style.color = "#ffc375";
-                oneResult.push(randomItem(fifthUpList));
-            }
-            else {
-                document.getElementById("gotchaResult").style.color = "#ffe075";
-                oneResult.push(randomItem(fifthList));
-            }
+    if(onlyFifthCount==89) {
+        var fifthRandom = Math.random();
+        if (fifthRandom >= 0.5) {
+            document.getElementById("gotchaResult").style.color = "#ffc375";
+            oneResult.push(randomItem(fifthUpList));
         }
-
-        else if (oneRandom > 0.006 && oneRandom <= 0.051) {
-            var fourthRandom = Math.random();
-            if (fourthRandom >= 0.5) {
-                document.getElementById("gotchaResult").style.color = "#c050ff";
-                oneResult.push(randomItem(fourthUpList));
-            }
-            else{
-                document.getElementById("gotchaResult").style.color = "#f775ff";
-                oneResult.push(randomItem(fourthList));
-            }
+        else {
+            document.getElementById("gotchaResult").style.color = "#ffe075";
+            oneResult.push(randomItem(fifthList));
+            onlyFifthCount = 1;
         }
+        onlyFifthCount = 0;
+    }
 
-        else if (oneRandom > 0.051) {
-            document.getElementById("gotchaResult").style.color = "#75c3ff";
-            oneResult.push(randomItem(thirdList));
+    else if(onlyFifthUpCount==1) {
+        var fifthRandom = Math.random();
+        if (fifthRandom >= 0.5) {
+            document.getElementById("gotchaResult").style.color = "#ffc375";
+            oneResult.push(randomItem(fifthUpList));
+        }
+        onlyFifthCount = 0;
+        onlyFifthUpCount = 0;
+    }
+
+    else {
+        for(oneCount=0; oneCount<1; oneCount++) {
+            var oneRandom = Math.random();
+    
+            if (oneRandom <= 0.006) {
+                var fifthRandom = Math.random();
+                if (fifthRandom >= 0.5) {
+                    document.getElementById("gotchaResult").style.color = "#ffc375";
+                    oneResult.push(randomItem(fifthUpList));
+                    onlyFifthCount = 0;
+                }
+                else {
+                    document.getElementById("gotchaResult").style.color = "#ffe075";
+                    oneResult.push(randomItem(fifthList));
+                    onlyFifthCount = 0;
+                }
+            }
+    
+            else if (oneRandom > 0.006 && oneRandom <= 0.051) {
+                var fourthRandom = Math.random();
+                if (fourthRandom >= 0.5) {
+                    document.getElementById("gotchaResult").style.color = "#c050ff";
+                    oneResult.push(randomItem(fourthUpList));
+                    onlyFifthCount += 1;
+                }
+                else{
+                    document.getElementById("gotchaResult").style.color = "#f775ff";
+                    oneResult.push(randomItem(fourthList));
+                    onlyFifthCount += 1;
+                }
+            }
+    
+            else if (oneRandom > 0.051) {
+                document.getElementById("gotchaResult").style.color = "#75c3ff";
+                oneResult.push(randomItem(thirdList));
+                onlyFifthCount += 1;
+            }
         }
     }
     totalCount += 1;
@@ -120,10 +154,46 @@ function monaGotcha(){
     }  
 }
 
+function zhongilGotcha(){
+    oneGotcha();
+    for(searchCount; searchCount++;) {
+        if(document.getElementById("gotchaResult").innerText == "종려"){
+            break;
+        }
+        else {
+            oneGotcha();
+        }
+    }  
+}
+
 function qiqiGotcha(){
     oneGotcha();
     for(searchCount; searchCount++;) {
         if(document.getElementById("gotchaResult").innerText == "치치"){
+            break;
+        }
+        else {
+            oneGotcha();
+        }
+    }  
+}
+
+function dilucGotcha(){
+    oneGotcha();
+    for(searchCount; searchCount++;) {
+        if(document.getElementById("gotchaResult").innerText == "다이루크"){
+            break;
+        }
+        else {
+            oneGotcha();
+        }
+    }  
+}
+
+function jinGotcha(){
+    oneGotcha();
+    for(searchCount; searchCount++;) {
+        if(document.getElementById("gotchaResult").innerText == "진"){
             break;
         }
         else {
