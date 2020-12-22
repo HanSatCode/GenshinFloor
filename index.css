@@ -109,17 +109,6 @@ h6{
     border: none;
 }
 
-#zhongilGotcha {
-    margin-top: 5px;
-    word-spacing:2px;
-    transition: all .5s ease;
-    font-family: 'Jua', sans-serif;
-    width: 10%; height: 25px;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.0);
-    font-size: 13px;
-    border: none;
-}
 
 #qiqiGotcha {
     margin-top: 5px;
@@ -134,18 +123,6 @@ h6{
 }
 
 #dilucGotcha {
-    margin-top: 5px;
-    word-spacing:2px;
-    transition: all .5s ease;
-    font-family: 'Jua', sans-serif;
-    width: 15%; height: 25px;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.0);
-    font-size: 13px;
-    border: none;
-}
-
-#jinGotcha {
     margin-top: 5px;
     word-spacing:2px;
     transition: all .5s ease;
