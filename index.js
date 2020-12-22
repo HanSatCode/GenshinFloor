@@ -1,5 +1,6 @@
 var onlyFifthCount = 0;
 var onlyFifthUpCount = 0;
+var onlyFourthCount = 0;
 var oneCount = 0;
 var oneResult = [];
 var tenCount = 0;
@@ -9,6 +10,7 @@ var totalPay = 0;
 
 var searchCount = 0;
 
+var bgVideoList = ["klee", "klee2"];
 var thirdList = ["탄궁", "신궁의 서약", "까마귀깃 활", "비취 오브", "드래곤 슬레이어 영웅담", "마도 서론", "흑술창", "훌륭한 대화수단", "드래곤 블러드 소드", "강철의 그림자", "비천어검", "여명신검", "차가운 칼날"];
 var fourthUpList = ["신염", "증운", "레이저"];
 var fourthList =  ["설탕", "노엘", "베넷", "피슬", "응광", "행추", "북두", "향릉", "바바라", "녹슨 활", "제례활", "절현", "페보니우스 활", "소심", "제례의 악장", "음유시인의 악장", "페보니우스 비전", "페보니우스 장창", "용학살창", "빗물 베기", "제례 대검", "시간의 검", "페보니우스 대검", "용의 포효", "제례검", "피리검", "페보니우스 검"];
@@ -37,6 +39,19 @@ function oneGotcha() {
             onlyFifthUpCount = 1;
         }
         onlyFifthCount = 0;
+    }
+
+    else if (onlyFourthCount==9) {
+        var fourthRandom = Math.random();
+        if (fourthRandom >= 0.5) {
+            document.getElementById("gotchaResult").style.color = "#c050ff";
+            oneResult.push(randomItem(fourthUpList));
+        }
+        else{
+            document.getElementById("gotchaResult").style.color = "#f775ff";
+            oneResult.push(randomItem(fourthList));
+        }
+        onlyFourthCount = 0;
     }
 
     else if(onlyFifthUpCount==1) {
@@ -73,11 +88,13 @@ function oneGotcha() {
                     document.getElementById("gotchaResult").style.color = "#c050ff";
                     oneResult.push(randomItem(fourthUpList));
                     onlyFifthCount += 1;
+                    onlyFourthCount = 0;
                 }
                 else{
                     document.getElementById("gotchaResult").style.color = "#f775ff";
                     oneResult.push(randomItem(fourthList));
                     onlyFifthCount += 1;
+                    onlyFourthCount = 0;
                 }
             }
     
@@ -85,6 +102,7 @@ function oneGotcha() {
                 document.getElementById("gotchaResult").style.color = "#75c3ff";
                 oneResult.push(randomItem(thirdList));
                 onlyFifthCount += 1;
+                onlyFourthCount += 1;
             }
         }
     }
@@ -154,18 +172,6 @@ function monaGotcha(){
     }  
 }
 
-function zhongilGotcha(){
-    oneGotcha();
-    for(searchCount; searchCount++;) {
-        if(document.getElementById("gotchaResult").innerText == "종려"){
-            break;
-        }
-        else {
-            oneGotcha();
-        }
-    }  
-}
-
 function qiqiGotcha(){
     oneGotcha();
     for(searchCount; searchCount++;) {
@@ -190,17 +196,6 @@ function dilucGotcha(){
     }  
 }
 
-function jinGotcha(){
-    oneGotcha();
-    for(searchCount; searchCount++;) {
-        if(document.getElementById("gotchaResult").innerText == "진"){
-            break;
-        }
-        else {
-            oneGotcha();
-        }
-    }  
-}
 
 function searchGotcha(){
     alert("조금만 기다려 자연어는 맞는데 구현이 힘들다");
