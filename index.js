@@ -16,6 +16,8 @@ var fourthUpList = ["신염", "증운", "레이저"];
 var fourthList =  ["설탕", "노엘", "베넷", "피슬", "응광", "행추", "북두", "향릉", "바바라", "녹슨 활", "제례활", "절현", "페보니우스 활", "소심", "제례의 악장", "음유시인의 악장", "페보니우스 비전", "페보니우스 장창", "용학살창", "빗물 베기", "제례 대검", "시간의 검", "페보니우스 대검", "용의 포효", "제례검", "피리검", "페보니우스 검"];
 var fifthUpList = ["종려"];
 var fifthList = ["각청", "모나", "치치", "다이루크", "진"];
+var fullList = [];
+var fullListPlus = fullList.concat(thirdList, fourthUpList, fourthList, fifthUpList, fifthList);
 
 function randomItem(a) {
     return a[Math.floor(Math.random() * a.length)];
@@ -99,7 +101,7 @@ function oneGotcha() {
             }
     
             else if (oneRandom > 0.051) {
-                document.getElementById("gotchaResult").style.color = "#75c3ff";
+                document.getElementById("gotchaResult").style.color = "#b1e4ff";
                 oneResult.push(randomItem(thirdList));
                 onlyFifthCount += 1;
                 onlyFourthCount += 1;
@@ -148,55 +150,26 @@ function oneGotcha() {
     document.getElementById("gotchaCount").innerText = totalCount;
 }```
 
-function keqingGotcha(){
-    oneGotcha();
-    for(searchCount; searchCount++;) {
-        if(document.getElementById("gotchaResult").innerText == "각청"){
-            break;
-        }
-        else {
-            oneGotcha();
-        }
-    }  
-}
-
-function monaGotcha(){
-    oneGotcha();
-    for(searchCount; searchCount++;) {
-        if(document.getElementById("gotchaResult").innerText == "모나"){
-            break;
-        }
-        else {
-            oneGotcha();
-        }
-    }  
-}
-
-function qiqiGotcha(){
-    oneGotcha();
-    for(searchCount; searchCount++;) {
-        if(document.getElementById("gotchaResult").innerText == "치치"){
-            break;
-        }
-        else {
-            oneGotcha();
-        }
-    }  
-}
-
-function dilucGotcha(){
-    oneGotcha();
-    for(searchCount; searchCount++;) {
-        if(document.getElementById("gotchaResult").innerText == "다이루크"){
-            break;
-        }
-        else {
-            oneGotcha();
-        }
-    }  
-}
-
-
 function searchGotcha(){
-    alert("조금만 기다려 자연어는 맞는데 구현이 힘들다");
+    var searchGotchaOn = prompt("어느 캐릭터를 검색하시고 싶으신가요?\n※ 한 번에 검색이 안되면 한 번 더 검색해 주세요");
+    var checkSearchGotchaOn = fullListPlus.includes(searchGotchaOn);
+
+    if(searchGotchaOn == "클레") {
+        alert("그런건 우리에게 있을 수가 없다...");
+    }
+
+    else if(checkSearchGotchaOn == false) {
+        alert("입력하신 값은 기원의 대상이 아니거나, 잘못 입력하신 것 같아요.\n틀린 것이 없는지 다시 한번 확인해 주세요.");
+    }
+
+    else {
+        for(searchCount; searchCount++;) {
+            if(document.getElementById("gotchaResult").innerText == searchGotchaOn){
+                break;
+            }
+            else {
+                oneGotcha();
+            }
+        }
+    }
 }
