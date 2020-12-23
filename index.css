@@ -46,7 +46,6 @@ body {
 h1{
     z-index: 999;
     position: relative;
-    left: 5px;
     letter-spacing:1px;
     font-size: 45px;
 }
@@ -86,15 +85,15 @@ h6{
 }
 
 #searchGotcha {
-    margin-top: 5px;
-    word-spacing:2px;
+    margin-top: 7px;
     transition: all .5s ease;
     font-family: 'Jua', sans-serif;
-    width: 48%; height: 25px;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.0);
-    font-size: 13px;
+    width: 30%; height: 22px;
+    background:#202020;
+    color: #ffffff;
+    font-size: 15px;
     border: none;
+    border-radius: 25px;
 }
 
 video {
