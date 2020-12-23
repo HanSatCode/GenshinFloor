@@ -12,9 +12,9 @@ var searchCount = 0;
 
 var bgVideoList = ["klee", "klee2"];
 var thirdList = ["탄궁", "신궁의 서약", "까마귀깃 활", "비취 오브", "드래곤 슬레이어 영웅담", "마도 서론", "흑술창", "훌륭한 대화수단", "드래곤 블러드 소드", "강철의 그림자", "비천어검", "여명신검", "차가운 칼날"];
-var fourthUpList = ["신염", "증운", "레이저"];
-var fourthList =  ["설탕", "노엘", "베넷", "피슬", "응광", "행추", "북두", "향릉", "바바라", "녹슨 활", "제례활", "절현", "페보니우스 활", "소심", "제례의 악장", "음유시인의 악장", "페보니우스 비전", "페보니우스 장창", "용학살창", "빗물 베기", "제례 대검", "시간의 검", "페보니우스 대검", "용의 포효", "제례검", "피리검", "페보니우스 검"];
-var fifthUpList = ["종려"];
+var fourthUpList = ["설탕", "베넷", "피슬"];
+var fourthList =  ["신염", "디오나", "증운", "노엘", "응광", "행추", "북두", "향릉", "바바라", "녹슨 활", "제례활", "절현", "페보니우스 활", "소심", "제례의 악장", "음유시인의 악장", "페보니우스 비전", "페보니우스 장창", "용학살창", "빗물 베기", "제례 대검", "시간의 검", "페보니우스 대검", "용의 포효", "제례검", "피리검", "페보니우스 검"];
+var fifthUpList = ["알베도"];
 var fifthList = ["각청", "모나", "치치", "다이루크", "진"];
 var fullList = [];
 var fullListPlus = fullList.concat(thirdList, fourthUpList, fourthList, fifthUpList, fifthList);
@@ -151,7 +151,7 @@ function oneGotcha() {
 }```
 
 function searchGotcha(){
-    var searchGotchaOn = prompt("어느 캐릭터를 검색하시고 싶으신가요?\n※ 한 번에 검색이 안되면 한 번 더 검색해 주세요");
+    var searchGotchaOn = prompt("어느 캐릭터나 장비를 검색하시고 싶으신가요?\n※ 한 번에 검색이 안되면 한 번 더 검색해 주세요");
     var checkSearchGotchaOn = fullListPlus.includes(searchGotchaOn);
 
     if(searchGotchaOn == "클레") {
@@ -159,7 +159,7 @@ function searchGotcha(){
     }
 
     else if(checkSearchGotchaOn == false) {
-        alert("입력하신 값은 기원의 대상이 아니거나, 잘못 입력하신 것 같아요.\n틀린 것이 없는지 다시 한번 확인해 주세요.");
+        alert("기원의 대상이 아니거나, 잘못 입력하신 것 같아요.\n틀린 것이 없는지 다시 한번 확인해 주세요.");
     }
 
     else {
