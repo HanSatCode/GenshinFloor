@@ -54,6 +54,7 @@ function oneGotcha() {
             oneResult.push(randomItem(fourthList));
         }
         onlyFourthCount = 0;
+        onlyFifthCount += 1;
     }
 
     else if(onlyFifthUpCount==1) {
@@ -75,13 +76,13 @@ function oneGotcha() {
                 if (fifthRandom >= 0.5) {
                     document.getElementById("gotchaResult").style.color = "#ffc375";
                     oneResult.push(randomItem(fifthUpList));
-                    onlyFifthCount = 0;
                 }
                 else {
                     document.getElementById("gotchaResult").style.color = "#ffe075";
                     oneResult.push(randomItem(fifthList));
-                    onlyFifthCount = 0;
                 }
+                onlyFifthCount = 0;
+                onlyFourthCount += 1;
             }
     
             else if (oneRandom > 0.006 && oneRandom <= 0.051) {
@@ -89,15 +90,14 @@ function oneGotcha() {
                 if (fourthRandom >= 0.5) {
                     document.getElementById("gotchaResult").style.color = "#c050ff";
                     oneResult.push(randomItem(fourthUpList));
-                    onlyFifthCount += 1;
                     onlyFourthCount = 0;
                 }
                 else{
                     document.getElementById("gotchaResult").style.color = "#f775ff";
                     oneResult.push(randomItem(fourthList));
-                    onlyFifthCount += 1;
                     onlyFourthCount = 0;
                 }
+                onlyFifthCount += 1;
             }
     
             else if (oneRandom > 0.051) {
@@ -113,42 +113,8 @@ function oneGotcha() {
     document.getElementById("gotchaResult").innerText = oneResult;
     document.getElementById("gotchaCount").innerText = totalCount+"회 도전";
     document.getElementById("gotchaPay").innerText = totalPay+"개의 원석 사용";
+    console.log(onlyFifthCount);
 }
-
-
-```function tenGotcha() {
-    tenResult = [];
-    for(tenCount=0; tenCount<10; tenCount++) {
-        var tenRandom = Math.random();
-
-        if (tenRandom <= 0.006) {
-            var fifthRandom = Math.random();
-            if (fifthRandom >= 0.5) {
-                tenResult.push(randomItem(fifthUpList));
-            }
-            else {
-                tenResult.push(randomItem(fifthList));
-            }
-        }
-
-        else if (tenRandom >= 0.006 && tenRandom <= 0.051) {
-            var fourthRandom = Math.random();
-            if (fourthRandom >= 0.5) {
-                tenResult.push(randomItem(fourthUpList));
-            }
-            else{
-                tenResult.push(randomItem(fourthList));
-            }
-        }
-
-        else{
-            tenResult.push(randomItem(thirdList));
-        }
-    }
-    totalCount += 10;
-    document.getElementById("gotchaResult").innerText = tenResult;
-    document.getElementById("gotchaCount").innerText = totalCount;
-}```
 
 function searchGotcha(){
     var searchGotchaOn = prompt("어느 캐릭터나 장비를 검색하시고 싶으신가요?\n※ 한 번에 검색이 안되면 한 번 더 검색해 주세요");
@@ -171,5 +137,15 @@ function searchGotcha(){
                 oneGotcha();
             }
         }
+    }
+}
+
+function extremeGotcha(){
+    alert("개발 구현 중");
+}
+
+function resetGotcha(){
+    if (confirm("정말 지금까지 진행했던 데이터를 삭제하시겠어요?") == true) {
+        history.go(0);
     }
 }
