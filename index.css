@@ -88,9 +88,33 @@ h6{
     margin-top: 7px;
     transition: all .5s ease;
     font-family: 'Jua', sans-serif;
+    width: 20%; height: 22px;
+    background:#ffffff;
+    color: #202020;
+    font-size: 15px;
+    border: none;
+    border-radius: 25px;
+}
+
+#extremeGotcha {
+    margin-top: 7px;
+    transition: all .5s ease;
+    font-family: 'Jua', sans-serif;
     width: 30%; height: 22px;
-    background:#202020;
-    color: #ffffff;
+    background:#ffffff;
+    color: #202020;
+    font-size: 15px;
+    border: none;
+    border-radius: 25px;
+}
+
+#resetGotcha {
+    margin-top: 7px;
+    transition: all .5s ease;
+    font-family: 'Jua', sans-serif;
+    width: 25%; height: 22px;
+    background:#ffffff;
+    color: #202020;
     font-size: 15px;
     border: none;
     border-radius: 25px;
@@ -101,6 +125,6 @@ video {
 	position: fixed;
 	width: auto;
 	height: auto;
-    filter: blur(10px);
-    -webkit-filter: blur(10px);
+    filter: blur(25px);
+    -webkit-filter: blur(25px);
 }
