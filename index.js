@@ -48,13 +48,13 @@ document.onkeyup = function(){
 }
 
 
-// 5성확률 0.6%. 종려확률 50%. 90회 기원시 반드시 획득. 얻은적 없다면 그다음 무조건.
+// 5성확률 0.6%. 종려확률 50%. 90회(체감상 80) 기원시 반드시 획득. 얻은적 없다면 그다음 무조건.
 // 4성확률 5.1%. 신염 증운 레이저 확률 50%. 10회기원시 반드시 획득. 얻은적 없다면 그다음 무조건.
 
 function oneGotcha() {
     oneResult = [];
 
-    if(onlyFifthCount==89) {
+    if(onlyFifthCount==79) {
         var fifthRandom = Math.random();
         if (fifthRandom >= 0.5) {
             document.getElementById("gotchaResult").style.color = "#ffc375";
