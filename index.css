@@ -125,6 +125,6 @@ video {
 	position: fixed;
 	width: auto;
 	height: auto;
-    filter: blur(0px);
-    -webkit-filter: blur(0px);
+    filter: blur(20px);
+    -webkit-filter: blur(20px);
 }
