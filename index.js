@@ -10,6 +10,9 @@ var totalPay = 0;
 
 var searchCount = 0;
 
+var getFifth = [];
+var getFourth = [];
+
 var bgVideoList = ["klee", "klee2"];
 var thirdList = ["탄궁", "신궁의 서약", "까마귀깃 활", "비취 오브", "드래곤 슬레이어 영웅담", "마도 서론", "흑술창", "훌륭한 대화수단", "드래곤 블러드 소드", "강철의 그림자", "비천어검", "여명신검", "차가운 칼날"];
 var fourthUpList = ["설탕", "베넷", "피슬"];
@@ -22,27 +25,6 @@ var fullListPlus = fullList.concat(thirdList, fourthUpList, fourthList, fifthUpL
 function randomItem(a) {
     return a[Math.floor(Math.random() * a.length)];
 }
-
-var setCookie = function(name, value, exp) {
-    var date = new Date();
-    date.setTime(date.getTime() + exp*24*60*60*1000);
-    document.cookie = name + '=' + value + ';expires=' + date.toUTCString() + ';path=/';
-};
-
-function getCookie(cName) {
-    cName = cName + '=';
-    var cookieData = document.cookie;
-    var start = cookieData.indexOf(cName);
-    var cValue = '';
-    if(start != -1){
-        start += cName.length;
-        var end = cookieData.indexOf(';', start);
-        if(end == -1)end = cookieData.length;
-        cValue = cookieData.substring(start, end);
-    }
-    return unescape(cValue);
-}
-
 document.onkeyup = function(){
     oneGotcha();
 }
@@ -66,6 +48,7 @@ function oneGotcha() {
             onlyFifthUpCount = 1;
         }
         onlyFifthCount = 0;
+        getFifth.push(oneResult);
     }
 
     else if (onlyFourthCount==9) {
@@ -80,6 +63,7 @@ function oneGotcha() {
         }
         onlyFourthCount = 0;
         onlyFifthCount += 1;
+        getFourth.push(oneResult);
     }
 
     else if(onlyFifthUpCount==1) {
@@ -90,6 +74,7 @@ function oneGotcha() {
         }
         onlyFifthCount = 0;
         onlyFifthUpCount = 0;
+        getFifth.push(oneResult);
     }
 
     else {
@@ -108,6 +93,7 @@ function oneGotcha() {
                 }
                 onlyFifthCount = 0;
                 onlyFourthCount += 1;
+                getFifth.push(oneResult);
             }
     
             else if (oneRandom > 0.006 && oneRandom <= 0.051) {
@@ -115,14 +101,14 @@ function oneGotcha() {
                 if (fourthRandom >= 0.5) {
                     document.getElementById("gotchaResult").style.color = "#c050ff";
                     oneResult.push(randomItem(fourthUpList));
-                    onlyFourthCount = 0;
                 }
                 else{
                     document.getElementById("gotchaResult").style.color = "#f775ff";
                     oneResult.push(randomItem(fourthList));
-                    onlyFourthCount = 0;
                 }
+                onlyFourthCount = 0;
                 onlyFifthCount += 1;
+                getFourth.push(oneResult);
             }
     
             else if (oneRandom > 0.051) {
@@ -165,8 +151,8 @@ function searchGotcha(){
     }
 }
 
-function extremeGotcha(){
-    alert("개발 구현 중");
+function listGotcha(){
+    alert("5성 : " + getFifth + "\n4성 : " + getFourth);
 }
 
 function resetGotcha(){
