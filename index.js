@@ -146,6 +146,7 @@ function searchGotcha(){
 
     if(searchGotchaOn == "클레") {
         alert("그런건 우리에게 있을 수가 없다...");
+        location.href = "https://www.pixiv.net/tags/klee/artworks?s_mode=s_tag";
     }
 
     else if(checkSearchGotchaOn == false) {
