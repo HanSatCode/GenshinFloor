@@ -43,6 +43,10 @@ function getCookie(cName) {
     return unescape(cValue);
 }
 
+document.onkeyup = function(){
+    oneGotcha();
+}
+
 
 // 5성확률 0.6%. 종려확률 50%. 90회 기원시 반드시 획득. 얻은적 없다면 그다음 무조건.
 // 4성확률 5.1%. 신염 증운 레이저 확률 50%. 10회기원시 반드시 획득. 얻은적 없다면 그다음 무조건.
@@ -168,8 +172,4 @@ function resetGotcha(){
     if (confirm("정말 지금까지 진행했던 데이터를 삭제하시겠어요?") == true) {
         history.go(0);
     }
-}
-
-function oneKeyGotcha() {
-    oneGotcha();
 }
