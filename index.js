@@ -23,6 +23,27 @@ function randomItem(a) {
     return a[Math.floor(Math.random() * a.length)];
 }
 
+var setCookie = function(name, value, exp) {
+    var date = new Date();
+    date.setTime(date.getTime() + exp*24*60*60*1000);
+    document.cookie = name + '=' + value + ';expires=' + date.toUTCString() + ';path=/';
+};
+
+function getCookie(cName) {
+    cName = cName + '=';
+    var cookieData = document.cookie;
+    var start = cookieData.indexOf(cName);
+    var cValue = '';
+    if(start != -1){
+        start += cName.length;
+        var end = cookieData.indexOf(';', start);
+        if(end == -1)end = cookieData.length;
+        cValue = cookieData.substring(start, end);
+    }
+    return unescape(cValue);
+}
+
+
 // 5성확률 0.6%. 종려확률 50%. 90회 기원시 반드시 획득. 얻은적 없다면 그다음 무조건.
 // 4성확률 5.1%. 신염 증운 레이저 확률 50%. 10회기원시 반드시 획득. 얻은적 없다면 그다음 무조건.
 
@@ -113,7 +134,6 @@ function oneGotcha() {
     document.getElementById("gotchaResult").innerText = oneResult;
     document.getElementById("gotchaCount").innerText = totalCount+"회 도전";
     document.getElementById("gotchaPay").innerText = totalPay+"개의 원석 사용";
-    console.log(onlyFifthCount);
 }
 
 function searchGotcha(){
@@ -148,4 +168,8 @@ function resetGotcha(){
     if (confirm("정말 지금까지 진행했던 데이터를 삭제하시겠어요?") == true) {
         history.go(0);
     }
+}
+
+function oneKeyGotcha() {
+    oneGotcha();
 }
