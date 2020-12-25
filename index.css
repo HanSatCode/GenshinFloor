@@ -96,11 +96,11 @@ h6{
     border-radius: 25px;
 }
 
-#extremeGotcha {
+#listGotcha {
     margin-top: 7px;
     transition: all .5s ease;
     font-family: 'Jua', sans-serif;
-    width: 30%; height: 22px;
+    width: 25%; height: 22px;
     background:#ffffff;
     color: #202020;
     font-size: 15px;
