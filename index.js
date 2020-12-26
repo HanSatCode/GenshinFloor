@@ -29,10 +29,6 @@ document.onkeyup = function(){
     oneGotcha();
 }
 
-console.log("<source src='img/"+randomItem(bgVideoList)+".mp4'>");
-document.getElementById("video").innerHTML = "<source src='img/"+randomItem(bgVideoList)+".mp4'>";
-
-
 // 5성확률 0.6%. 종려확률 50%. 90회(체감상 80회) 기원시 반드시 획득. 얻은적 없다면 그다음 무조건.
 // 4성확률 5.1%. 신염 증운 레이저 확률 50%. 10회기원시 반드시 획득. 얻은적 없다면 그다음 무조건.
 
