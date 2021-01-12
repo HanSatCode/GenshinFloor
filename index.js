@@ -10,14 +10,11 @@ var totalPay = 0;
 
 var searchCount = 0;
 
-var getFifth = [];
-var getFourth = [];
-
 var bgVideoList = ["klee", "klee2"];
 var thirdList = ["탄궁", "신궁의 서약", "까마귀깃 활", "비취 오브", "드래곤 슬레이어 영웅담", "마도 서론", "흑술창", "훌륭한 대화수단", "드래곤 블러드 소드", "강철의 그림자", "비천어검", "여명신검", "차가운 칼날"];
-var fourthUpList = ["설탕", "베넷", "피슬"];
+var fourthUpList = ["노엘", "행추", "향릉"];
 var fourthList =  ["신염", "디오나", "증운", "노엘", "응광", "행추", "북두", "향릉", "바바라", "녹슨 활", "제례활", "절현", "페보니우스 활", "소심", "제례의 악장", "음유시인의 악장", "페보니우스 비전", "페보니우스 장창", "용학살창", "빗물 베기", "제례 대검", "시간의 검", "페보니우스 대검", "용의 포효", "제례검", "피리검", "페보니우스 검"];
-var fifthUpList = ["알베도"];
+var fifthUpList = ["감우"];
 var fifthList = ["각청", "모나", "치치", "다이루크", "진"];
 var fullList = [];
 var fullListPlus = fullList.concat(thirdList, fourthUpList, fourthList, fifthUpList, fifthList);
@@ -47,7 +44,6 @@ function oneGotcha() {
             onlyFifthUpCount = 1;
         }
         onlyFifthCount = 0;
-        getFifth.push(oneResult);
     }
 
     else if (onlyFourthCount==9) {
@@ -62,7 +58,6 @@ function oneGotcha() {
         }
         onlyFourthCount = 0;
         onlyFifthCount += 1;
-        getFourth.push(oneResult);
     }
 
     else if(onlyFifthUpCount==1) {
@@ -73,7 +68,6 @@ function oneGotcha() {
         }
         onlyFifthCount = 0;
         onlyFifthUpCount = 0;
-        getFifth.push(oneResult);
     }
 
     else {
@@ -92,7 +86,6 @@ function oneGotcha() {
                 }
                 onlyFifthCount = 0;
                 onlyFourthCount += 1;
-                getFifth.push(oneResult);
             }
     
             else if (oneRandom > 0.006 && oneRandom <= 0.051) {
@@ -107,7 +100,6 @@ function oneGotcha() {
                 }
                 onlyFourthCount = 0;
                 onlyFifthCount += 1;
-                getFourth.push(oneResult);
             }
     
             else if (oneRandom > 0.051) {
@@ -150,8 +142,8 @@ function searchGotcha(){
     }
 }
 
-function listGotcha(){
-    alert("5성 : " + getFifth + "\n4성 : " + getFourth);
+function changeGotcha(){
+    alert("기다려");
 }
 
 function resetGotcha(){
