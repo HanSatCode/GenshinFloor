@@ -96,11 +96,11 @@ h6{
     border-radius: 25px;
 }
 
-#listGotcha {
+#changeGotcha {
     margin-top: 7px;
     transition: all .5s ease;
     font-family: 'Jua', sans-serif;
-    width: 25%; height: 22px;
+    width: 20%; height: 22px;
     background:#ffffff;
     color: #202020;
     font-size: 15px;
@@ -125,6 +125,6 @@ video {
 	position: fixed;
 	width: auto;
 	height: auto;
-    filter: blur(20px);
-    -webkit-filter: blur(20px);
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
 }
