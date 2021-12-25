@@ -10,11 +10,11 @@ var totalPay = 0;
 
 var searchCount = 0;
 
-var bgVideoList = ["klee", "klee2"];
+var bgVideoList = ["bg"];
 var thirdList = ["탄궁", "신궁의 서약", "까마귀깃 활", "비취 오브", "드래곤 슬레이어 영웅담", "마도 서론", "흑술창", "훌륭한 대화수단", "드래곤 블러드 소드", "강철의 그림자", "비천어검", "여명신검", "차가운 칼날"];
-var fourthUpList = ["디오나", "북두", "신염"];
-var fourthList =  ["설탕", "증운", "노엘", "베넷", "피슬", "응광", "행추", "향릉", "레이저", "바바라", "녹슨 활", "제례활", "절현", "페보니우스 활", "소심", "제례의 악장", "음유시인의 악장", "페보니우스 비전", "페보니우스 장창", "용학살창", "빗물 베기", "제례 대검", "시간의 검", "페보니우스 대검", "용의 포효", "제례검", "피리검", "페보니우스 검"];
-var fifthUpList = ["소"];
+var fourthUpList = ["고로", "바바라", "향릉"];
+var fourthList =  ["쿠죠 사라", "사유", "토마", "연비", "로자리아", "신염", "설탕", "디오나", "중운", "노엘", "베넷", "피슬", "응광", "행추", "북두", "레이저", "녹슨 활", "제례활", "절현", "페보니우스 활", "소심", "제례의 악장", "음유시인의 악장", "페보니우스 비전", "페보니우스 장창", "용학살창", "빗물 베기", "제례 대검", "시간의 검", "페보니우스 대검", "용의 포효", "제례검", "피리검", "페보니우스 검"];
+var fifthUpList = ["이토"];
 var fifthList = ["각청", "모나", "치치", "다이루크", "진"];
 var fullList = [];
 var fullListPlus = fullList.concat(thirdList, fourthUpList, fourthList, fifthUpList, fifthList);
@@ -118,15 +118,10 @@ function oneGotcha() {
 }
 
 function searchGotcha(){
-    var searchGotchaOn = prompt("어느 캐릭터나 장비를 검색하시고 싶으신가요?\n※ 한 번에 검색이 안되면 한 번 더 검색해 주세요");
+    var searchGotchaOn = prompt("어떤 캐릭터나 장비가 나올때까지 스킵하고 싶으신가요?\n※ 한 번에 검색이 안되면 한 번 더 검색해 주세요");
     var checkSearchGotchaOn = fullListPlus.includes(searchGotchaOn);
 
-    if(searchGotchaOn == "클레") {
-        alert("그런건 우리에게 있을 수가 없다...");
-        location.href = "https://www.pixiv.net/tags/klee/artworks?s_mode=s_tag";
-    }
-
-    else if(checkSearchGotchaOn == false) {
+    if(checkSearchGotchaOn == false) {
         alert("기원의 대상이 아니거나, 잘못 입력하신 것 같아요.\n틀린 것이 없는지 다시 한번 확인해 주세요.");
     }
 
@@ -140,10 +135,6 @@ function searchGotcha(){
             }
         }
     }
-}
-
-function changeGotcha(){
-    alert("기다려");
 }
 
 function resetGotcha(){
