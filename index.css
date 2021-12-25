@@ -40,6 +40,13 @@ body {
     z-index: 999;
     top: 35px;
     position: relative;
+    font-size: 12px;
+}
+
+#info2 {
+    z-index: 999;
+    top: 35px;
+    position: relative;
     font-size: 10px;
 }
 
@@ -79,30 +86,19 @@ h6{
     width: 100%; height: 50px;
     background: #ffffff;
     color: #202020;
-    font-size: 20px;
+    font-size: 25px;
     border: none;
     border-radius: 25px;
 }
 
 #searchGotcha {
     margin-top: 7px;
+    margin-right: 15px;
     transition: all .5s ease;
     font-family: 'Jua', sans-serif;
-    width: 20%; height: 22px;
-    background:#ffffff;
-    color: #202020;
-    font-size: 15px;
-    border: none;
-    border-radius: 25px;
-}
-
-#changeGotcha {
-    margin-top: 7px;
-    transition: all .5s ease;
-    font-family: 'Jua', sans-serif;
-    width: 20%; height: 22px;
-    background:#ffffff;
-    color: #202020;
+    width: 30%; height: 22px;
+    background:rgba(0, 0, 0, 0.0);
+    color: #ffffff;
     font-size: 15px;
     border: none;
     border-radius: 25px;
@@ -110,11 +106,12 @@ h6{
 
 #resetGotcha {
     margin-top: 7px;
+    margin-left: 15px;
     transition: all .5s ease;
     font-family: 'Jua', sans-serif;
-    width: 25%; height: 22px;
-    background:#ffffff;
-    color: #202020;
+    width: 30%; height: 22px;
+    background:rgba(0, 0, 0, 0.0);
+    color: #ffffff;
     font-size: 15px;
     border: none;
     border-radius: 25px;
@@ -125,6 +122,5 @@ video {
 	position: fixed;
 	width: auto;
 	height: auto;
-    filter: blur(0px);
-    -webkit-filter: blur(0px);
+    -webkit-filter: blur(50px);
 }
