@@ -20,7 +20,7 @@ It is also a repository created to study and utilize HTML, CSS, and Javascript :
 Button|Meaning|Note
 :---:|:---:|:---:
 한 번 도전|Wish|Execute the wish once.
-넘기기|Skip|Skip to the point where the corresponding pickup character or weapon item appears.
+넘기기|Skip|Skip to the point where the corresponding character or weapon appears.
 초기화|Initialization|Deletes the progressed wish data.
 
 You can try the wish using the mouse, or you can tap the keyboard to try the wish continuously.
