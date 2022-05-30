@@ -120,7 +120,7 @@ h6{
 video {
     z-index: -999;
 	position: fixed;
-	width: auto;
-	height: auto;
+	width: 200%;
+	height: 200%;
     -webkit-filter: blur(50px);
 }
