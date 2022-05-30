@@ -6,12 +6,12 @@ It is also a repository created to study and utilize HTML, CSS, and Javascript :
 # Current Database
 ```
 [Promotional 5★ Character]
-- "Frostflake Heron" Kamisato Ayaka
+- "Valley Orchid" Yelan
 
 [Featured 4★ Characters]
-- "Wolf Boy" Razor
-- "Thorny Benevolence" Rosaria
-- "Mujina Ninja" Sayu
+- "Shining Idol" Barbara
+- "Chivalric Blossom" Noelle
+- "Wise Innocence" Yanfei
 ```
 
 # How To Play
