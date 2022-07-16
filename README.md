@@ -6,13 +6,13 @@ It is also a repository created to study and utilize HTML, CSS, and Javascript :
 # Current Database
 ```
 [Promotional 5★ Character]
-- "Valley Orchid" Yelan
-- "Vigilant Yaksha" Xiao (WIP)
+- "Scarlet Leaves Pursue Wild Waves" Kaedehara Kazuha
+- "Fleeing Sunlight" Klee (Not Implement)
 
 [Featured 4★ Characters]
-- "Shining Idol" Barbara
-- "Chivalric Blossom" Noelle
-- "Wise Innocence" Yanfei
+- "Analytical Harmony" Shikanoin Heizou
+- "Eclipsing Star" Ningguang
+- "Protector From Afar" Thoma
 ```
 
 # How To Play
