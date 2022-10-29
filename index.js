@@ -120,8 +120,8 @@ function oneGotcha() {
 function searchGotcha(){
     var searchGotchaOn = prompt("어떤 캐릭터나 장비가 나올때까지 넘기고 싶으신가요?", "");
 
-    if (searchGotchaOn == null) {
-        alert("작업을 취소했어요.")
+    if (searchGotchaOn == null || searchGotchaOn == '') {
+        return 0;
     }
 
     else {
