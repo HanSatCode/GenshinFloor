@@ -6,13 +6,12 @@ It is also a repository created to study and utilize HTML, CSS, and Javascript :
 ## Current Database
 ```
 [Promotional 5★ Character]
-- "Scarlet Leaves Pursue Wild Waves" Kaedehara Kazuha
-- "Fleeing Sunlight" Klee (Not Implement)
+- "Dance of Lotuslight" Nilou
 
 [Featured 4★ Characters]
-- "Analytical Harmony" Shikanoin Heizou
-- "Eclipsing Star" Ningguang
-- "Protector From Afar" Thoma
+- "Uncrowned Lordof the Ocean" Beidou
+- "Shining Idol" Barbara
+- "Exquisite Delicacy" Xiangling
 ```
 
 ## How To Play
@@ -36,5 +35,5 @@ The development will continue until I delete this game. Although there may be so
 
 ## Source
 ```
-Background Video : https://youtu.be/03OrtAv9nBc
+Background Video : https://www.youtube.com/watch?v=BivoSMPF4xw
 ```
