@@ -1,4 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+@font-face {
+    font-family: 'PyeongChangPeace-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PyeongChang-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChang-Bold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
 
 @-webkit-keyframes fadein {
     from { opacity:0; }
@@ -10,8 +22,12 @@
 
 ::-webkit-scrollbar { display: none; }
 
+
+
+/* <!-- Body --> */
+
 body {
-    font-family: 'Jua', sans-serif;
+    font-family: 'PyeongChangPeace-Bold', sans-serif;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -26,101 +42,130 @@ body {
     -webkit-animation: fadein 1s;
 }
 
+video {
+    z-index: -999;
+	position: fixed;
+	height: 125%;
+    -webkit-filter: blur(0px);
+}
+
+
+
+/* <!-- Form --> */
 
 .form {
     z-index: 999;
     position: relative;
-    padding-top: 80px; padding-bottom: 80px; padding-left: 50px; padding-right: 50px;
+    padding: 80px 50px;
     border-radius: 40px;
-    background: rgba(0, 0, 0, 0.6);
-    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(20px) saturate(200%);
+    -webkit-backdrop-filter: blur(20px) saturate(200%);
+    background-color: rgba(40, 40, 40, 0.5);
 }
 
-#info {
+.form > .variable{
     z-index: 999;
-    top: 35px;
-    position: relative;
-    font-size: 12px;
-}
-
-#info2 {
-    z-index: 999;
-    top: 35px;
-    position: relative;
-    font-size: 10px;
-}
-
-h1{
-    z-index: 999;
-    position: relative;
-    letter-spacing:1px;
-    font-size: 45px;
-}
-
-h6{
-    z-index: 999;
-    position: relative;
-    font-size: 18px;
-    font-weight : lighter;
-}
-
-.formText{
-    z-index: 999;
+    font-family: 'PyeongChang-Bold', sans-serif;
     margin-top: 50px;
     margin-bottom: 50px;
     font-size: 25px;
     font-weight : lighter;
 }
 
+.form > h1{
+    z-index: 999;
+    position: relative;
+    letter-spacing:1px;
+    font-size: 45px;
+}
+
+.form > h6{
+    font-family: 'PyeongChang-Bold', sans-serif;
+    z-index: 999;
+    position: relative;
+    font-size: 18px;
+    font-weight : lighter;
+}
+
+
+
+/* <!-- Info --> */
+
+.info {
+    z-index: 999;
+    position: relative;
+    font-family: 'PyeongChang-Bold', sans-serif;
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+.info > a {
+    text-decoration: none;
+    color: white;
+}
+
+
+
+/* <!-- Object --> */
+
 #gotchaPay {
     z-index: 999;
     margin-top: 50px;
-    font-size: 10px;
+    font-size: 15px;
     font-weight : lighter;
 }
 
 #oneGotcha {
+    font-family: 'PyeongChang-Bold', sans-serif;
     word-spacing:2px;
     transition: all .5s ease;
-    font-family: 'Jua', sans-serif;
     width: 100%; height: 50px;
     background: #ffffff;
     color: #202020;
     font-size: 25px;
     border: none;
-    border-radius: 25px;
+    border-radius: 15px;
+}
+
+#oneGotcha:hover {
+    background-color: #202020;
+    color: #ffffff;
 }
 
 #searchGotcha {
-    margin-top: 7px;
-    margin-right: 15px;
+    font-family: 'PyeongChang-Bold', sans-serif;
+    margin-top: 10px;
+    margin-right: 2.5px;
     transition: all .5s ease;
-    font-family: 'Jua', sans-serif;
-    width: 30%; height: 22px;
-    background:rgba(0, 0, 0, 0.0);
+    width: 47%; height: 25px;
     color: #ffffff;
     font-size: 15px;
     border: none;
-    border-radius: 25px;
+    border-radius: 5px;
+    backdrop-filter: blur(20px) saturate(200%);
+    -webkit-backdrop-filter: blur(20px) saturate(200%);
+    background-color: rgba(23, 40, 15, 0.5);
+}
+
+#searchGotcha:hover {
+    background-color: rgba(149, 255, 99, 0.5);
 }
 
 #resetGotcha {
-    margin-top: 7px;
-    margin-left: 15px;
+    font-family: 'PyeongChang-Bold', sans-serif;
+    margin-top: 10px;
+    margin-left: 2.5px;
     transition: all .5s ease;
-    font-family: 'Jua', sans-serif;
-    width: 30%; height: 22px;
-    background:rgba(0, 0, 0, 0.0);
+    width: 47%; height: 25px;
     color: #ffffff;
     font-size: 15px;
     border: none;
-    border-radius: 25px;
+    border-radius: 5px;
+    backdrop-filter: blur(20px) saturate(200%);
+    -webkit-backdrop-filter: blur(20px) saturate(200%);
+    background-color: rgba(40, 15, 15, 0.5);
 }
 
-video {
-    z-index: -999;
-	position: fixed;
-	width: 200%;
-	height: 200%;
-    -webkit-filter: blur(50px);
+#resetGotcha:hover {
+    background-color: rgba(255, 99, 99, 0.5);
 }
