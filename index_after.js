@@ -1,1 +1,0 @@
-document.getElementById("video").innerHTML = "<source src='src/"+randomItem(bgVideoList)+".mp4'>";
