@@ -1,4 +1,6 @@
 # GenshinFloor
+![Introduction](https://user-images.githubusercontent.com/50666621/199493345-d7321e46-6a22-4707-812d-6424b1eb9a9b.png)
+
 It's an wish simulator made at high school student when I was really playing hard on "Genshin Impact".
 
 It is also a repository created to study and utilize HTML, CSS, and Javascript :)
@@ -6,16 +8,16 @@ It is also a repository created to study and utilize HTML, CSS, and Javascript :
 ## Current Database
 ```
 [Promotional 5★ Character]
-- "Dance of Lotuslight" Nilou
+- "Physic of Purity" Nahida (Dendro)
 
 [Featured 4★ Characters]
-- "Uncrowned Lordof the Ocean" Beidou
-- "Shining Idol" Barbara
-- "Exquisite Delicacy" Xiangling
+- "Wolf Boy" Razor (Electro)
+- "Chivalric Blossom" Noelle (Geo)
+- "Trial by Fire" Bennett (Pyro)
 ```
 
 ## How To Play
-> Using a keyboard or mouse
+> Use keyboard or mouse to wish
 
 Button|Meaning|Note
 :---:|:---:|:---:
