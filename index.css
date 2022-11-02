@@ -42,8 +42,6 @@ video {
     /* -webkit-filter: blur(25px); */
 }
 
-
-
 /* <!-- Form --> */
 
 .form {
@@ -116,3 +114,16 @@ button {
 #oneGotcha:hover { background-color: #202020; color: #ffffff; }
 #searchGotcha:hover { background-color: rgba(185, 255, 152, 0.5); }
 #resetGotcha:hover { background-color: rgba(255, 99, 99, 0.5); }
+
+/* Extension */
+
+@media ( max-width: 1280px ) {
+    video {
+        margin-left: 39.5vh;
+    }
+    .form {
+        background-color: rgba(40, 40, 40, 0.5);
+        backdrop-filter: blur(3px) saturate(200%);
+        -webkit-backdrop-filter: blur(3px) saturate(200%);
+    }
+}
