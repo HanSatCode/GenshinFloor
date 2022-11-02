@@ -29,7 +29,7 @@ body {
     display: flex;
     height: 100vh;
     color: white;
-    background-color: black;
+    background-color: white;
     background-size: cover;
     overflow: hidden;
     -webkit-animation: fadein 1s;
@@ -38,7 +38,7 @@ body {
 video {
     z-index: -999;
 	position: fixed;
-	height: 125%;
+	height: 117.5%;
     /* -webkit-filter: blur(25px); */
 }
 
@@ -114,5 +114,5 @@ button {
 }
 
 #oneGotcha:hover { background-color: #202020; color: #ffffff; }
-#searchGotcha:hover { background-color: rgba(149, 255, 99, 0.5); }
+#searchGotcha:hover { background-color: rgba(185, 255, 152, 0.5); }
 #resetGotcha:hover { background-color: rgba(255, 99, 99, 0.5); }
