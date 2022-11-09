@@ -39,6 +39,7 @@ video {
     z-index: -999;
 	position: fixed;
 	height: 117.5%;
+    transition: margin-left 1s;
     /* -webkit-filter: blur(25px); */
 }
 
@@ -117,9 +118,11 @@ button {
 
 /* Extension */
 
-@media ( max-width: 1280px ) {
+@media ( max-width: 1080px ) {
     video {
         margin-left: 39.5vh;
+        transition: margin-left 1s;
+        }
     }
     .form {
         background-color: rgba(40, 40, 40, 0.5);
