@@ -38,7 +38,7 @@ body {
 video {
     z-index: -999;
 	position: fixed;
-	height: 117.5%;
+	height: 100.0%;
     transition: margin-left 1s;
     /* -webkit-filter: blur(25px); */
 }
@@ -120,13 +120,13 @@ button {
 
 @media ( max-width: 1080px ) {
     video {
-        margin-left: 39.5vh;
+        margin-left: 60vh;
         transition: margin-left 1s;
         }
     }
     .form {
         background-color: rgba(40, 40, 40, 0.5);
-        backdrop-filter: blur(3px) saturate(200%);
-        -webkit-backdrop-filter: blur(3px) saturate(200%);
+        backdrop-filter: blur(1px) saturate(200%);
+        -webkit-backdrop-filter: blur(1px) saturate(200%);
     }
 }
