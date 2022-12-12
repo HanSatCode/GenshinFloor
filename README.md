@@ -8,12 +8,12 @@ It is also a repository created to study and utilize HTML, CSS, and Javascript :
 ## Current Database
 ```
 [Promotional 5★ Character]
-- "Physic of Purity" Nahida (Dendro)
+- "Eons Adrift" Wanderer
 
 [Featured 4★ Characters]
-- "Wolf Boy" Razor (Electro)
-- "Chivalric Blossom" Noelle (Geo)
-- "Trial by Fire" Bennett (Pyro)
+- "Enigmatic Machinist" Faruzan (Anemo)
+- "Canine Warrior" Gorou (Geo)
+- "Wise Innocence" Yanfei (Pyro)
 ```
 
 ## How To Play
@@ -37,5 +37,5 @@ The development will continue until I delete this game. Although there may be so
 
 ## Source
 ```
-Background Video : https://www.youtube.com/watch?v=vNtyAJCx_jE
+Background Video : Genshin web event :)
 ```
