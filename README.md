@@ -1,5 +1,5 @@
 # GenshinFloor
-![Introduction](https://user-images.githubusercontent.com/50666621/199493345-d7321e46-6a22-4707-812d-6424b1eb9a9b.png)
+![Introduction](https://user-images.githubusercontent.com/50666621/207092055-c8b9edbc-d8e9-4236-a0cf-fa29e1e75474.png)
 
 It's an wish simulator made at high school student when I was really playing hard on "Genshin Impact".
 
